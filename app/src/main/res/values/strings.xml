@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Health Tracker</string>
+    <string name="bmi_info">BMI is a measurement of a person\'s leanness or corpulence based on their height and weight, and is intended to quantify tissue mass. It is widely used as a general indicator of whether a person has a healthy body weight for their height.</string>
+    <string name="meditate_info">According to experts you should at least sleep 21 hours a day and spend time on social media sites for the rest 2 hours.
+That is one hell of productive day.</string>
+    <string name="empty_text">No activities added.\n
+        Click + to add an activity.\n\n
+    Note: You\'ll be notified of the activity everyday at the given time ✌</string>
+</resources>

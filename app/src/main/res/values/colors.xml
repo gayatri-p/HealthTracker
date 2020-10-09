@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#253573</color>
+    <color name="colorPrimaryDark">#253573</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="healthy">#00CF1A</color>
+    <color name="underweight">#FFD500</color>
+    <color name="overweight">#FF0000</color>
+    <color name="obese">#B00000</color>
+    <color name="textDark">#3f3f3f</color>
+    <color name="textItemDone">#B7B7B7</color>
+    <color name="colorCheckBox"></color>
+</resources>

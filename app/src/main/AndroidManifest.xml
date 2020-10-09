@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gp.healthtracker">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ReadActivity"
+            android:parentActivityName=".HomePageActivity"></activity>
+        <activity android:name=".DrinkActivity"
+            android:parentActivityName=".HomePageActivity" />
+        <activity
+            android:name=".AboutActivity"
+            android:parentActivityName=".HomePageActivity" />
+        <activity
+            android:name=".DentalActivity"
+            android:parentActivityName=".HomePageActivity" />
+        <activity
+            android:name=".MedicationActivity"
+            android:parentActivityName=".HomePageActivity" />
+        <activity android:name=".AddActivity" />
+        <activity android:name=".UpdateActivity" />
+        <activity
+            android:name=".ProfileActivity"
+            android:parentActivityName=".HomePageActivity" />
+        <activity
+            android:name=".TimerActivity"
+            android:parentActivityName=".HomePageActivity" />
+        <activity
+            android:name=".ExerciseActivity"
+            android:parentActivityName=".HomePageActivity" />
+        <activity android:name=".HomePageActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- <receiver android:name=".MyAlarm" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="true"/> -->
+        <receiver android:name="com.allyants.notifyme.NotificationPublisher" />
+        <receiver android:name="com.allyants.notifyme.BootNotifyMe">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

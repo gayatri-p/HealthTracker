@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgnew"
+    tools:context=".HomePageActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <RelativeLayout
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:text="MedTracker"
+                    android:textSize="38sp"
+                    android:textFontWeight="900"
+                    android:textColor="#ffffff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tvCompleted"
+                    android:text="Tasks Completed: 3/10"
+                    android:textColor="#B3E0FF"
+                    android:textFontWeight="700"
+                    android:textSize="22sp"
+                    android:layout_marginTop="4dp"
+                    android:layout_below="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:onClick="openProfileActivity"
+                    android:layout_width="140dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/tvCompleted"
+                    android:layout_marginTop="25dp"
+                    android:textSize="18sp"
+                    android:text="My Profile"
+                    android:elevation="@dimen/card_elevation"
+                    android:textColor="#fff"
+                    android:background= "@drawable/button"
+                    android:textAllCaps="false"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <GridLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnOrderPreserved="false"
+                android:alignmentMode="alignMargins"
+                android:verticalSpacing="20dp"
+                android:horizontalSpacing="10dp"
+                android:columnCount="2"
+                android:rowCount="3"
+                android:paddingBottom="50dp"
+
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/exercise_btn"
+                    android:onClick="openExerciseActivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="@dimen/card_elevation"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="@dimen/card_margin"
+                    app:cardBackgroundColor="#fff"
+                    >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:src="@drawable/ic_exercise"
+                            android:layout_width="@dimen/icon_width"
+                            android:layout_height="@dimen/icon_height"/>
+
+                        <TextView
+                            android:textColor="#6f6f6f"
+                            android:layout_marginTop="15dp"
+                            android:textSize="18sp"
+                            android:text="Exercise"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:onClick="openTimerActivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="@dimen/card_elevation"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="@dimen/card_margin"
+                    app:cardBackgroundColor="#fff"
+                    >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:src="@drawable/ic_meditate"
+                            android:layout_width="@dimen/icon_width"
+                            android:layout_height="@dimen/icon_height"/>
+
+                        <TextView
+                            android:textColor="#6f6f6f"
+                            android:layout_marginTop="15dp"
+                            android:textSize="18sp"
+                            android:text="Meditate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:onClick="openMedicationActivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="@dimen/card_elevation"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="@dimen/card_margin"
+                    app:cardBackgroundColor="#fff"
+                    >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:src="@drawable/ic_medicine"
+                            android:layout_width="@dimen/icon_width"
+                            android:layout_height="@dimen/icon_height"/>
+
+                        <TextView
+                            android:textColor="#6f6f6f"
+                            android:layout_marginTop="15dp"
+                            android:textSize="17sp"
+                            android:text="Medication"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:onClick="openDentalActivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="@dimen/card_elevation"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="@dimen/card_margin"
+                    app:cardBackgroundColor="#fff"
+                    >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:src="@drawable/ic_brush"
+                            android:layout_width="@dimen/icon_width"
+                            android:layout_height="@dimen/icon_height"/>
+
+                        <TextView
+                            android:textColor="#6f6f6f"
+                            android:layout_marginTop="15dp"
+                            android:textSize="18sp"
+                            android:text="Dental\nHealth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:onClick="openDrinkActivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="@dimen/card_elevation"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="@dimen/card_margin"
+                    app:cardBackgroundColor="#fff"
+                    >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:src="@drawable/ic_drink"
+                            android:layout_width="@dimen/icon_width"
+                            android:layout_height="@dimen/icon_height"/>
+
+                        <TextView
+                            android:textColor="#6f6f6f"
+                            android:layout_marginTop="15dp"
+                            android:textSize="17sp"
+                            android:text="Drink\nWater"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:onClick="openReadActivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="@dimen/card_elevation"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="@dimen/card_margin"
+                    app:cardBackgroundColor="#fff"
+                    >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:src="@drawable/ic_read"
+                            android:layout_width="@dimen/icon_width"
+                            android:layout_height="@dimen/icon_height"/>
+
+                        <TextView
+                            android:textColor="#6f6f6f"
+                            android:layout_marginTop="15dp"
+                            android:textSize="18sp"
+                            android:text="Read"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </GridLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/btnAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:tooltipText="About"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|right">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="22dp"
+
+            android:src="@color/colorAccent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="25dp"
+            android:text="i"
+            android:textFontWeight="900"
+            android:elevation="16dp"
+            android:textColor="@android:color/white"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </FrameLayout>
+
+</RelativeLayout>
